@@ -17,6 +17,7 @@ class home {
     selectSprache(sprache) {
         homepage.buttonSprache().click()
         homepage.menuSprache(sprache).click()
+        cy.url('include',sprache)
     }
 
 }
