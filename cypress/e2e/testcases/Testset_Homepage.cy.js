@@ -19,9 +19,10 @@ describe('everything homepage related', () => {
   
     it ('changes the language', function () {
 
-        // homeScreen.selectSprache('/de/besuchen')
+      cy.intercept('GET', 'https://www.rijksmuseum.nl/de/besuchen*').as('besuchen')
         homeScreen.selectSprache(this.sprachen.Deutsch_German)
-        homeScreen.selectSprache('/en/visit')
+        cy.wait('@besuchen').its('response.statusCode').should('eq', 200)
+        homeScreen.selectSprache(this.sprachen.English_English)
         visScreen.goBackHome()
 
     })
