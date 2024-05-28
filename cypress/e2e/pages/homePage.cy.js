@@ -4,8 +4,8 @@ buttonCookiesAkzeptieren(){
     return cy.get('#rijksmuseum-app').find('button[class="button button-secondary"]')
 }
 
-menuSprache(sprache){
-    return cy.get('#header-language-menu').find('a[href="' +sprache+ '"]')
+menuSprache(sprachen){
+    return cy.get('#header-language-menu').find('a[href="' +sprachen+ '"]')
 }
 
 buttonSprache(){

@@ -8,17 +8,25 @@ describe('everything homepage related', () => {
       cy.visit('https://www.rijksmuseum.nl/en')
       homeScreen.acceptCookies()
 
+      //cy.fixture('Referenzdaten/Sprachen.json').then(function (sprachen){
+        //this.sprachen = sprachen
+      //})
+
       cy.fixture('Referenzdaten/Sprachen.json').then(function (sprachen){
         this.sprachen = sprachen
       })
     })
   
-    it('changes the language', () => {
+    it ('changes the language', function () {
 
-        // homeScreen.selectSprache(this.sprachen.English_English)
-        homeScreen.selectSprache('/de/besuchen')
+        // homeScreen.selectSprache('/de/besuchen')
+        homeScreen.selectSprache(this.sprachen.Deutsch_German)
         homeScreen.selectSprache('/en/visit')
         visScreen.goBackHome()
 
     })
+
+    
+
+    
 })  

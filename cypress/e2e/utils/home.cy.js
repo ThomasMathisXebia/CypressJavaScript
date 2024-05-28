@@ -14,10 +14,10 @@ class home {
         // })
     }
 
-    selectSprache(sprache) {
+    selectSprache(sprachen) {
         homepage.buttonSprache().click()
-        homepage.menuSprache(sprache).click()
-        cy.url('include',sprache)
+        homepage.menuSprache(sprachen).click()
+        cy.url('include',sprachen)
     }
 
 }
