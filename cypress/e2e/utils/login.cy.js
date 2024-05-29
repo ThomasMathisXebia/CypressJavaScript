@@ -5,6 +5,7 @@ class login {
 
     accountRijksstudio(credentials) {
 
+        logPage.buttonLogin().click()   
         logPage.fieldEmail().type(credentials.email)
         logPage.fieldPassword().type(credentials.password)
         cy.get('#email').should('have.value', credentials.email)

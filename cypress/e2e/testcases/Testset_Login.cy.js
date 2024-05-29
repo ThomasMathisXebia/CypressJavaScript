@@ -18,7 +18,6 @@ describe('everything login related', () => {
 
   it('logs in with Rijksstudio account', function () {
 
-    cy.visit('https://www.rijksmuseum.nl/en/login?redirectUrl=https://www.rijksmuseum.nl/en')
     logScreen.accountRijksstudio(this.credentialsMap.get('With_Rijksstudio_Account'))
 
   })

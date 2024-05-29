@@ -1,7 +1,11 @@
 class loginPage {
 
     buttonLogin(){
-        return cy.get('#myform').find('Log in')
+        return cy.get('#rijksmuseum-app').find('li[class="header-link"]').find('a[href*="login"]')
+    }
+
+    buttonLoginSubmit(){
+        return cy.get('#myform').find('button[type ="submit"]')
     }
 
     fieldEmail(){
