@@ -10,7 +10,7 @@ class login {
         logPage.fieldPassword().type(credentials.password)
         cy.get('#email').should('have.value', credentials.email)
         cy.get('#wachtwoord').should('have.value', credentials.password)
-        logPage.buttonLogin().click()
+        logPage.buttonLoginSubmit().click()
 
     }
 
